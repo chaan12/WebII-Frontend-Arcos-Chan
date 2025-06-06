@@ -1,0 +1,122 @@
+[
+  {
+    "id_pago": 1,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 9,
+    "total": 9,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 2,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 10,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 3,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 11,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 4,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 12,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 5,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 1,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 6,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 2,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 7,
+    "id_alumno": 1,
+    "id_conceptoPago": 2,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": null,
+    "total": 10100,
+    "id_beca": null,
+    "descuento": 0,
+    "pagoFinal": 10100
+  },
+  {
+    "id_pago": 8,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 3,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 9,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 4,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  },
+  {
+    "id_pago": 10,
+    "id_alumno": 1,
+    "id_conceptoPago": 1,
+    "id_metodo_pago": 1,
+    "id_carrera_semestre": 1,
+    "id_mes": 5,
+    "total": 9250,
+    "id_beca": 5,
+    "descuento": 2775,
+    "pagoFinal": 7400
+  }
+]

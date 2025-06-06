@@ -1,0 +1,14 @@
+
+
+[
+  { "id_mes": 1, "nombre": "Enero" },
+  { "id_mes": 2, "nombre": "Febrero" },
+  { "id_mes": 3, "nombre": "Marzo" },
+  { "id_mes": 4, "nombre": "Abril" },
+  { "id_mes": 5, "nombre": "Mayo" },
+  { "id_mes": 6, "nombre": "Junio" },
+  { "id_mes": 9, "nombre": "Septiembre" },
+  { "id_mes": 10, "nombre": "Octubre" },
+  { "id_mes": 11, "nombre": "Noviembre" },
+  { "id_mes": 12, "nombre": "Diciembre" }
+]

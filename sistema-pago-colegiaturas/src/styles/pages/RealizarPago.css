@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.layout-alumno {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.sidebar {
+  flex: 0 0 240px;
+  height: 100vh;
+  background-color: #002c5f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sidebar-header h2 {
+  font-size: 1.4rem;
+  color: white;
+  margin: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.sidebar li:hover {
+  background-color: #004a94;
+}
+
+.sidebar li:last-child {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.realizar-pago-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  color: #002855;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  color: #002855;
+}
+
+.alumno-info {
+  margin-bottom: 40px;
+}
+
+.alumno-info h2 {
+  font-size: 1.8rem;
+  color: #002855;
+  margin-bottom: 16px;
+}
+
+.alumno-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.beca-info {
+  margin-top: 8px;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.pago-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  box-sizing: border-box;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pago-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #002855;
+  margin-bottom: 8px;
+}
+
+.form-group .tipo-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.form-group .tipo-container label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #002855;
+  cursor: pointer;
+}
+
+.form-group .tipo-container input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #005bb5;
+}
+
+.form-group select {
+  width: 220px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group select:focus {
+  border-color: #005bb5;
+}
+
+.amount-display {
+  width: 220px;
+  padding: 10px 14px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  color: #002855;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px 0;
+  background-color: #19a8e3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #0d8cc0;
+}
+
+.realizar-pago-container p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.error {
+  color: #c3272b;
+  font-weight: 600;
+}
+
+.realizar-pago-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.realizar-pago-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.realizar-pago-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .realizar-pago-container {
+    padding: 20px;
+  }
+  .pago-card {
+    padding: 24px;
+  }
+  .form-group .tipo-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .amount-display,
+  .form-group select {
+    width: 100%;
+  }
+  .btn-submit {
+    max-width: 100%;
+  }
+}

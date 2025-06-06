@@ -1,0 +1,22 @@
+[
+  {
+    "id_metodoPago": 1,
+    "nombre": "Efectivo"
+  },
+  {
+    "id_metodoPago": 2,
+    "nombre": "Tarjeta de Crédito"
+  },
+  {
+    "id_metodoPago": 3,
+    "nombre": "Tarjeta de Débito"
+  },
+  {
+    "id_metodoPago": 4,
+    "nombre": "Transferencia Bancaria"
+  },
+  {
+    "id_metodoPago": 5,
+    "nombre": "Pago en Línea"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id_beca": 1,
+    "nombre": "Beca Excelencia Académica",
+    "descuento": 0.25
+  },
+  {
+    "id_beca": 2,
+    "nombre": "Beca Deportiva",
+    "descuento": 0.15
+  },
+  {
+    "id_beca": 3,
+    "nombre": "Beca Cultural",
+    "descuento": 0.10
+  },
+  {
+    "id_beca": 4,
+    "nombre": "Beca Socioeconómica",
+    "descuento": 0.20
+  },
+  {
+    "id_beca": 5,
+    "nombre": "Beca Talento Tecnológico",
+    "descuento": 0.30
+  },
+  {
+    "id_beca": 6,
+    "nombre": "Sin beca",
+    "descuento": 0.00
+  }
+]

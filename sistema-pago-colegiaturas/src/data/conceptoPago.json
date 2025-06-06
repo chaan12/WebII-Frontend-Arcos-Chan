@@ -1,0 +1,10 @@
+[
+  {
+    "id_conceptoPago": 1,
+    "nombre": "Colegiatura"
+  },
+  {
+    "id_conceptoPago": 2,
+    "nombre": "Inscripción"
+  }
+]

@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.home-alumno {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  position: relative;
+  background-color: #f8f9fa;
+}
+
+.top-banner {
+  width: 100%;
+  height: 70px;
+  background-color: #002c5f;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  left: 240px;
+  z-index: 10;
+}
+
+.banner-logo {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .top-banner {
+    left: 0;
+  }
+  .home-alumno {
+    flex-direction: column;
+  }
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 100px auto 0;
+}
+
+.profile-banner {
+  height: 120px;
+  background: linear-gradient(90deg, #002c5f 0%, #005bb5 100%);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #002c5f;
+}
+
+.profile-details h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #002c5f;
+  font-weight: 600;
+}
+
+.profile-details p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.main-content .profile-card {
+  margin-top: 100px;
+}

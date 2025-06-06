@@ -1,0 +1,97 @@
+.school-card {
+  width: 100%;
+  max-width: 600px;
+  min-height: 250px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+}
+
+.card-content {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.card-content p {
+  font-size: 1.5rem;
+  color: #00205B;
+  
+  margin: 0;
+}
+
+.card-content h3 {
+  font-size: 4rem;
+  margin: 0.2rem 0 0;
+  color: #00205B;
+  font-weight: 800;
+}
+
+.card-button {
+  width: 100%;
+  background-color: #ccc;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 0 20px 20px;
+  font-size: 0.95rem;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.program-list {
+  list-style: none;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+.program-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.7rem;
+}
+
+.program-list .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.index-section-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+  padding: 4rem 5%;
+  background-color: #fff;
+  justify-items: center;
+}
+
+.program-list {
+  list-style: none;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

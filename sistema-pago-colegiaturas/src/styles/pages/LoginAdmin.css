@@ -1,0 +1,123 @@
+.login-alumno {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0 0 2.5rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 0;
+}
+
+.input-group .icon {
+  font-size: 1.3rem;
+  margin-right: 0.8rem;
+  color: #333;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem 0;
+  font-family: inherit;
+  color: #333;
+  background-color: white;
+}
+
+.btn-login,
+.btn-secondary {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 600;
+  background-color: #007ac1;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+}
+
+.btn-login:hover,
+.btn-secondary:hover {
+  background-color: #005e9e;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #007ac1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 0 0.25rem 0;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input-group input:focus {
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 0.8rem;
+  left: 2rem;
+  font-size: 1rem;
+  color: #007ac1;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  font-size: 0.8rem;
+  color: #007ac1;
+  background: white;
+  padding: 0 4px;
+}

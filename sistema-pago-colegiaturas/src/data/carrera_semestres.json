@@ -1,0 +1,58 @@
+[
+  {
+    "id_carrera_semestre": 1,
+    "id_carrera": 16,
+    "numero": 1,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 2,
+    "id_carrera": 16,
+    "numero": 2,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 3,
+    "id_carrera": 16,
+    "numero": 3,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 4,
+    "id_carrera": 16,
+    "numero": 4,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 5,
+    "id_carrera": 16,
+    "numero": 5,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 6,
+    "id_carrera": 16,
+    "numero": 6,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 7,
+    "id_carrera": 16,
+    "numero": 7,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  },
+  {
+    "id_carrera_semestre": 8,
+    "id_carrera": 16,
+    "numero": 8,
+    "costo_inscripcion": 10100,
+    "costo_mensualidad": 9250
+  }
+]

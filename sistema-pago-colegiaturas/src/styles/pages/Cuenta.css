@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.cuenta-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.cuenta-container {
+  flex: 1;
+  background-color: #eef2f7;
+  padding: 40px 60px;
+  overflow-y: auto;
+}
+
+.cuenta-container h1 {
+  font-size: 2.2rem;
+  color: #002c5f;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.form-cuenta {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-cuenta h2 {
+  margin-top: 28px;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #002c5f;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  transition: border-color 0.2s, background-color 0.2s;
+  color: #333;
+}
+
+.form-group input:disabled {
+  background-color: #ebebeb;
+  color: #555;
+}
+
+.form-group input:focus {
+  border-color: #002c5f;
+  background-color: #ffffff;
+}
+
+.error {
+  color: #a00;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.btn-guardar {
+  margin-top: 32px;
+  width: 100%;
+  background-color: #002c5f;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-guardar:hover {
+  background-color: #005bb5;
+}
