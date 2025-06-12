@@ -11,7 +11,6 @@ import GestionPagos from "./pages/GestionPagos";
 import VerAlumnos from "./pages/VerAlumnos";
 import GestionAlumnos from "./pages/GestionAlumnos";
 import EditarAlumnos from "./pages/EditarAlumnos";
-import EditarAlumno from "./pages/EditarAlumnos";
 import EliminarAlumno from "./pages/EliminarAlumnos";
 
 export default function App() {
@@ -25,7 +24,8 @@ export default function App() {
         <Route path="/admin/pagos" element={<GestionPagos />} />
         <Route path="/admin/gestionar-alumnos" element={<GestionAlumnos />} />
         <Route path="/admin/editar-alumnos" element={<EditarAlumnos />} />
-        <Route path="/admin/editar-alumno/:id" element={<EditarAlumno />} />
+        <Route path="/admin/editar-alumno/:id" element={<EditarAlumnos />} />
+        <Route path="/admin/eliminar-alumnos" element={<EliminarAlumno />} />
         <Route path="/admin/eliminar-alumno/:id" element={<EliminarAlumno />} />
         <Route path="/admin/alumnos" element={<VerAlumnos />} />
         <Route path="/home-alumno" element={<HomeAlumno />} />
