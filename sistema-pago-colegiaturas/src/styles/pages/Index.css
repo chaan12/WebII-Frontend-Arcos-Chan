@@ -192,3 +192,43 @@ html {
   padding: 4rem 8%;
   background-color: #fff;
 }
+
+@media (max-width: 768px) {
+  .index-banner img {
+    height: 40px;
+  }
+  .menu-icon {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  .index-section-1,
+  .index-section-2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 8%;
+    gap: 2rem;
+  }
+  .index-section-1 .text-content,
+  .index-section-1 .image-content,
+  .index-section-2 .licenciaturas-text,
+  .index-section-2 .licenciaturas-img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .text-content h1 {
+    font-size: 3rem;
+  }
+  .text-content p,
+  .licenciaturas-text h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .index-section-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 8%;
+  }
+}

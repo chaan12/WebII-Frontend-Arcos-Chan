@@ -127,10 +127,12 @@ export default function RealizarPago() {
         try {
           const urlPagos = `${
             import.meta.env.VITE_API_PROXY || ""
-          }/api/pago/?id_alumno=${foundAlumno.id_alumno}`;
+          }/api/pago/alumno/${foundAlumno.id_alumno}`;
           const respPagos = await axios.get(urlPagos);
-          if (Array.isArray(respPagos.data.pagos)) {
+          if (respPagos.data.status === "ok" && Array.isArray(respPagos.data.pagos)) {
             setPagos(respPagos.data.pagos);
+          } else {
+            setPagos([]);
           }
         } catch {
         }
@@ -168,16 +170,20 @@ export default function RealizarPago() {
 
   const handleConfirmarPago = async (e) => {
     e.preventDefault();
+    console.log("handleConfirmarPago iniciado", { paymentType, selectedMonth, selectedMetodo });
     if (!selectedMetodo) {
+      console.log("No hay método de pago seleccionado");
       alert("Selecciona un método de pago.");
       return;
     }
     if (paymentType === "colegiatura" && !selectedMonth) {
+      console.log("No hay mes seleccionado para colegiatura");
       alert("Selecciona un mes para pagar.");
       return;
     }
 
     const concepto = paymentType === "inscripcion" ? 2 : 1;
+    console.log("Concepto determinado:", concepto);
 
     let costoBase =
       paymentType === "inscripcion"
@@ -195,21 +201,34 @@ export default function RealizarPago() {
       id_conceptoPago: concepto,
       id_metodo_pago: Number(selectedMetodo),
       id_carrera_semestre: alumno.carrera_semestre,
-      id_mes: paymentType === "colegiatura" ? monthEntry?.id : null,
+      id_mes: paymentType === "colegiatura"
+        ? monthEntry?.id
+        : null,
       total: Number(costoBase.toFixed(2)),
       pagoFinal: Number(finalMonto.toFixed(2)),
     };
+    console.log("Payload a enviar:", body);
 
     try {
       const resp = await axios.post("/api/pago/", body);
+      console.log("Respuesta del servidor:", resp.data);
       if (resp.data.status === "ok") {
         alert("Pago registrado con éxito.");
         navigate("/libreta-pago");
       } else {
         alert("Ocurrió un problema al registrar el pago.");
       }
-    } catch {
-      alert("Error al conectar con el servidor.");
+    } catch (err) {
+      console.error("Error al crear pago:", err);
+      const data = err.response?.data;
+      console.log("Error response data:", data);
+      if (data?.campos_faltantes && Array.isArray(data.campos_faltantes)) {
+        const lista = data.campos_faltantes.join(", ");
+        alert(`${data.mensaje}. Campos faltantes: ${lista}.`);
+      } else {
+        const msg = data?.mensaje || data?.detail || "Error al conectar con el servidor.";
+        alert(msg);
+      }
     }
   };
 
@@ -218,7 +237,7 @@ export default function RealizarPago() {
       <div className="layout-alumno">
         <Sidebar />
         <div className="realizar-pago-container">
-          <p>⏳ Cargando...</p>
+          <p>Cargando...</p>
         </div>
       </div>
     );
@@ -238,6 +257,17 @@ export default function RealizarPago() {
   const inscripcionPagada = pagos.some(
     (p) => p.id_conceptoPago === 2 && p.id_alumno === alumno?.id_alumno
   );
+  const eneroPagado = pagos.some(
+    (p) =>
+      p.id_conceptoPago === 1 &&
+      p.mes?.toLowerCase().trim() === "enero"
+  );
+  const febreroPagado = pagos.some(
+    (p) =>
+      p.id_conceptoPago === 1 &&
+      p.mes?.toLowerCase().trim() === "febrero"
+  );
+  const canPayInscripcion = eneroPagado && febreroPagado;
 
   return (
     <div className="layout-alumno">
@@ -296,9 +326,13 @@ export default function RealizarPago() {
                       setPaymentType("inscripcion");
                       setSelectedMonth("inscripción");
                     }}
-                    disabled={inscripcionPagada}
+                    disabled={inscripcionPagada || !canPayInscripcion}
                   />
-                  {inscripcionPagada ? "Inscripción (Pagado)" : "Inscripción"}
+                  {!canPayInscripcion
+                    ? "Inscripción (requiere pagar enero y febrero)"
+                    : inscripcionPagada
+                    ? "Inscripción (Pagado)"
+                    : "Inscripción"}
                 </label>
               </div>
             </div>

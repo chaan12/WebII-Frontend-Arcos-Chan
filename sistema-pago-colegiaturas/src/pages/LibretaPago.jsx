@@ -131,15 +131,18 @@ export default function LibretaPago() {
   }, []);
 
   useEffect(() => {
-    if (!alumno?.id_alumno) return; 
+    if (!alumno?.id_alumno) return;
 
     const obtenerPagos = async () => {
       try {
-        const response = await axios.get("/api/pago/");
-        console.log("✅ Pagos cargados:", response.data.pagos);
-        setPagos(response.data.pagos);
+        const url = `/api/pago/alumno/${alumno.id_alumno}`;
+        console.log("Intentando GET en URL proxy:", url);
+        const response = await axios.get(url);
+        console.log("✅ Pagos cargados para alumno", alumno.id_alumno, response.data.pagos);
+        setPagos(Array.isArray(response.data.pagos) ? response.data.pagos : []);
       } catch (error) {
         console.error("❌ Error al cargar pagos:", error);
+        console.log("Detalles del error.response:", error.response);
       }
     };
 

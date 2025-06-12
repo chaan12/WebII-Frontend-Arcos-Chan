@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/pages/LoginAlumno.css";
 import fondo from "../img/fondo.png";
 import logo from "../img/logo.png";
+import axios from "axios";
 
 export default function LoginAdmin() {
   const [matricula, setMatricula] = useState("");
@@ -14,18 +15,21 @@ export default function LoginAdmin() {
       alert("Por favor completa ambos campos.");
       return;
     }
+
     try {
-      const response = await fetch("/api/administrador/?matricula=" + matricula + "&password=" + password);
-      const data = await response.json();
-      if (data.status === "ok" && data.administradores.length > 0) {
-        localStorage.setItem("adminLoggedIn", "true");
+      const response = await axios.post("/api/administrador/login", {
+        matricula: matricula.trim(),
+        password: password
+      });
+      const result = response.data;
+      if (result.status === "ok" && result.administrador) {
+        localStorage.setItem("adminMatricula", result.administrador.matricula);
         navigate("/home-admin");
       } else {
-        alert("Matrícula o contraseña incorrecta");
+        alert("Matrícula o contraseña incorrecta.");
       }
     } catch (error) {
-      console.error("Error al conectar con la API", error);
-      alert("Ocurrió un error. Intenta más tarde.");
+      alert("Datos Incorrectos");
     }
   };
 
@@ -42,7 +46,7 @@ export default function LoginAdmin() {
 
         <img src={logo} alt="Logo Escuela Modelo" className="logo" />
         <h2>
-          SOLO <br /> ADMINISTRADORES
+          ADMIN <br /> PORTAL
         </h2>
 
         <div className="input-group">

@@ -127,7 +127,7 @@
 .form-group .tipo-container {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 5px;
 }
 
 .form-group .tipo-container label {
@@ -136,10 +136,11 @@
   font-size: 1rem;
   color: #002855;
   cursor: pointer;
+  margin-right: 5rem;
 }
 
 .form-group .tipo-container input[type="radio"] {
-  margin-right: 8px;
+  margin-right: 10px;
   accent-color: #005bb5;
 }
 
