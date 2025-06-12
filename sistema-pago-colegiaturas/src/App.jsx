@@ -10,6 +10,9 @@ import HomeAdmin from "./pages/HomeAdmin";
 import GestionPagos from "./pages/GestionPagos";
 import VerAlumnos from "./pages/VerAlumnos";
 import GestionAlumnos from "./pages/GestionAlumnos";
+import EditarAlumnos from "./pages/EditarAlumnos";
+import EditarAlumno from "./pages/EditarAlumnos";
+import EliminarAlumno from "./pages/EliminarAlumnos";
 
 export default function App() {
   return (
@@ -21,6 +24,9 @@ export default function App() {
         <Route path="/home-admin" element={<HomeAdmin />} />
         <Route path="/admin/pagos" element={<GestionPagos />} />
         <Route path="/admin/gestionar-alumnos" element={<GestionAlumnos />} />
+        <Route path="/admin/editar-alumnos" element={<EditarAlumnos />} />
+        <Route path="/admin/editar-alumno/:id" element={<EditarAlumno />} />
+        <Route path="/admin/eliminar-alumno/:id" element={<EliminarAlumno />} />
         <Route path="/admin/alumnos" element={<VerAlumnos />} />
         <Route path="/home-alumno" element={<HomeAlumno />} />
         <Route path="/libreta-pago" element={<LibretaPago />} />{" "}

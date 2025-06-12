@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+:root {
+  --color-primary: #5a67d8;
+  --color-primary-dark: #00205B;
+  --color-secondary: #4a5568;
+  --color-background: #f7fafc;
+  --color-card-bg: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text: #2d3748;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.editar-alumnos-container {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.btn-back {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition);
+}
+.btn-back:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.editar-alumnos-container h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  color: var(--color-primary-dark);
+  position: relative;
+}
+.editar-alumnos-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.card-header {
+  background-color: var(--color-primary-dark);
+  padding: 1rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  text-align: center;
+}
+
+.card-header h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.search-group {
+  display: flex;
+  width: 100%;
+  max-width: 360px;
+  margin: 1.5rem auto 2rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+.search-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.search-group input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+  outline: none;
+}
+.search-group button {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+.search-group button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+  outline: none;
+}
+
+.error {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-guardar,
+.btn-cancelar {
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.btn-guardar {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+.btn-guardar:hover {
+  background-color: var(--color-primary-dark);
+}
+.btn-cancelar {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-cancelar:hover {
+  background-color: rgba(90, 103, 216, 0.1);
+}
+
+.card {
+  max-width: 640px;
+  margin: 2rem auto;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .editar-alumnos-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .search-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-group button,
+  .btn-guardar,
+  .btn-cancelar {
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+  }
+}

@@ -22,7 +22,13 @@ export default function HomeAdmin() {
       <main className="main-content-admin">
         <div className="admin-options">
           <button onClick={() => navigate("/admin/gestionar-alumnos")}>
-            Gestionar Alumnos
+            Agregar Alumnos
+          </button>
+          <button onClick={() => navigate("/admin/editar-alumnos")}>
+            Editar Alumnos
+          </button>
+          <button onClick={() => navigate("/admin/eliminar-alumnos")}>
+            Eliminar Alumnos
           </button>
           <button onClick={() => navigate("/admin/alumnos")}>
             Ver Todos los Alumnos
