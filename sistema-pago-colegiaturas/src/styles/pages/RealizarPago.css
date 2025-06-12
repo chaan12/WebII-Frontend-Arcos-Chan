@@ -2,10 +2,17 @@
 
 .layout-alumno {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  
+  width: 100%;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
+}
+
+@media(min-width: 1024px){
+    .layout-alumno{
+
+      height: 100vh;
+    }
 }
 
 .sidebar {
@@ -104,6 +111,8 @@
   max-width: 700px;
   width: 100%;
   margin-top: 20px;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .pago-form {
@@ -136,7 +145,18 @@
   font-size: 1rem;
   color: #002855;
   cursor: pointer;
-  margin-right: 5rem;
+  
+}
+
+.form-group .tipo-container label input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
+
+@media(min-width: 1024px){
+    .form-group .tipo-container label {
+      margin-right: 5rem;
+    }
 }
 
 .form-group .tipo-container input[type="radio"] {

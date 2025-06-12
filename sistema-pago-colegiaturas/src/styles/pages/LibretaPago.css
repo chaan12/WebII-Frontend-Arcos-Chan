@@ -2,10 +2,17 @@
 
 .layout-alumno {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
+  flex-direction: column;
+}
+
+@media(min-width: 1024px){
+    .layout-alumno {
+      height: 100vh;
+      flex-direction: row;
+    }
 }
 
 .libreta-pago-container {
@@ -37,11 +44,23 @@
 
 .grid-pagos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  
   gap: 20px;
   justify-content: center;
   margin-top: 40px;
   width: 100%;
+}
+
+@media(min-width: 560px){
+    .grid-pagos{
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px){
+    .grid-pagos{
+      grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .pago-box {
