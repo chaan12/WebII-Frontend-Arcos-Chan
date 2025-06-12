@@ -111,30 +111,33 @@ export default function VerAlumnos() {
       {!loading && !error && (
         <>
           {alumnosFiltrados.length > 0 ? (
-            <table className="tabla-alumnos">
-              <thead>
-                <tr>
-                  <th>Matrícula</th>
-                  <th>Nombre</th>
-                  <th>Carrera</th>
-                  <th>Semestre</th>
-                  <th>Beca</th>
-                </tr>
-              </thead>
-              <tbody>
-                {alumnosFiltrados.map((alu) => (
-                  <tr key={alu.id_alumno}>
-                    <td>{alu.matricula}</td>
-                    <td>
-                      {alu.nombre} {alu.apellido_pat} {alu.apellido_mat}
-                    </td>
-                    <td>{alu.carrera || "—"}</td>
-                    <td>{alu.semestre || "—"}</td>
-                    <td>{alu.becaNombre}</td>
+            <div className="table-wrapper">
+              <table className="tabla-alumnos">
+                <thead>
+                  <tr>
+                    <th>Matrícula</th>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Semestre</th>
+                    <th>Beca</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {alumnosFiltrados.map((alu) => (
+                    <tr key={alu.id_alumno}>
+                      <td>{alu.matricula}</td>
+                      <td>
+                        {alu.nombre} {alu.apellido_pat} {alu.apellido_mat}
+                      </td>
+                      <td>{alu.carrera || "—"}</td>
+                      <td>{alu.semestre || "—"}</td>
+                      <td>{alu.becaNombre}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            
           ) : (
             <p className="sin-alumnos">No se encontraron alumnos.</p>
           )}

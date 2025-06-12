@@ -24,12 +24,19 @@
 
 .search-filters {
   display: flex;
-  min-width: 1000px;
-  flex-wrap: nowrap;
   gap: 1rem;
   justify-content: center;
   margin-bottom: 1.5rem;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  
+}
+
+@media(min-width: 1024px){
+    .search-filters {
+      flex-wrap: nowrap;
+      min-width: 1000px;
+      overflow-x: auto;
+    }
 }
 
 .search-filters input {
@@ -52,8 +59,15 @@
   border-color: #29a9e1;
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
 .tabla-alumnos {
   width: 100%;
+  min-width: 600px; 
   table-layout: fixed;
   border-collapse: collapse;
   font-size: 1rem;
