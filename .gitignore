@@ -1,11 +1,6 @@
 # Dependencias de Node
 node_modules/
 
-# Archivos de entorno (si usas archivos .env)
-.env
-.env.local
-.env.*.local
-
 # Salidas de construcción
 dist/
 build/
