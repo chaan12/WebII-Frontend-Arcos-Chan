@@ -236,6 +236,7 @@
 
 @media (max-width: 768px) {
   .realizar-pago-container {
+    margin-left: 35px;
     padding: 20px;
   }
   .pago-card {

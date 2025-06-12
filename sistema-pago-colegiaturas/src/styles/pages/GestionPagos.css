@@ -132,3 +132,40 @@ body {
   margin-top: 1rem;
 }
 
+
+@media (max-width: 768px) {
+  .gestion-pagos-container {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 2rem 4%;
+    box-shadow: none;
+  }
+  .buscador-alumno {
+    padding: 0 1rem;
+  }
+  .buscador-alumno input,
+  .buscador-alumno button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .tabla-pagos-container h2 {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+  .tabla-pagos {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tabla-pagos th,
+  .tabla-pagos td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .alumno-info {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+

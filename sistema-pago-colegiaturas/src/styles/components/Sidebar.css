@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .sidebar {
@@ -50,4 +49,71 @@
 .sidebar-menu li:last-child {
   margin-top: auto;
   margin-bottom: 20px;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: -17px;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.2s;
+}
+.burger:focus {
+  outline: none;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+}
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.overlay.active {
+  display: block;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 240px;
+  height: 100vh;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+.sidebar.open {
+  left: 0;
+}
+@media (min-width: 768px) {
+  .overlay {
+    display: none;
+  }
+  .sidebar {
+    left: 0;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    left: -200px;
+    transition: left 0.3s ease;
+  }
+  .sidebar.open {
+    left: 0;
+  }
 }
