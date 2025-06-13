@@ -28,11 +28,18 @@ body {
 
 .editar-alumnos-container {
   max-width: 640px;
-  margin: 2rem auto;
+  margin: 2rem;
+  
   padding: 2rem;
   background-color: var(--color-card-bg);
   border-radius: var(--radius);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+@media(min-width: 1024px){
+    .editar-alumnos-container{
+      margin: 2rem auto;
+    }
 }
 
 .btn-back {
@@ -182,11 +189,21 @@ body {
 
 .card {
   max-width: 640px;
-  margin: 2rem auto;
+  margin: 2rem;
   background-color: var(--color-card-bg);
   border-radius: var(--radius);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+}
+
+.card-body{
+  padding: 1rem;
+}
+
+@media(min-width: 1024px){
+    .card{
+      margin: 2rem auto;
+    }
 }
 
 @media (max-width: 600px) {

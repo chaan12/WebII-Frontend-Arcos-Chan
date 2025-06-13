@@ -210,38 +210,7 @@ export default function EditarAlumnos() {
                   disabled
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="id_carrera">Carrera</label>
-                <select
-                  id="id_carrera"
-                  value={idCarrera ?? ""}
-                  onChange={(e) => setIdCarrera(Number(e.target.value))}
-                  required
-                >
-                  <option value="">Selecciona una carrera</option>
-                  {carreras.map((c) => (
-                    <option key={c.id_carrera} value={c.id_carrera}>
-                      {c.nombre}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="semestre">Semestre</label>
-                <select
-                  id="semestre"
-                  value={semestre}
-                  onChange={(e) => setSemestre(e.target.value)}
-                  required
-                >
-                  <option value="">Selecciona semestre</option>
-                  {semestresDisponibles.map((s) => (
-                    <option key={s.id_carrera_semestre} value={s.numero}>
-                      {s.numero}
-                    </option>
-                  ))}
-                </select>
-              </div>
+
               <div className="form-group">
                 <button type="submit" className="btn-guardar">
                   Guardar Cambios
